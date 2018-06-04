@@ -1,0 +1,352 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="tyagi.shubham.customsearch.fragments.DorkFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/dork_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_search"
+                android:drawableTint="@color/primaryTextColor"
+                android:ems="10"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:paddingBottom="0dp"
+                android:text="@string/search_parms"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="16sp"
+                tools:text="@string/search_parms"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_intext_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/intext"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_inurl_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/inurl"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_intitle_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/intitle"
+                        android:inputType="text"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_site_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/site"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor"
+                    >
+
+                    <EditText
+                        android:id="@+id/dork_filetype_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/filetype"
+                        android:inputType="text"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_tags_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/tags"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_include_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/include"
+                        android:inputType="text"/>
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_exclude_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/exclude"
+                        android:inputType="text"/>
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/primaryTextColor">
+
+                    <EditText
+                        android:id="@+id/dork_other_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+
+
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/others"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cb_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/primaryTextColor"
+                    android:paddingStart="5dp"
+                    android:tag="0"
+                    android:text="@string/lastyear"
+                    android:textColor="@android:color/black"/>
+
+                <CheckBox
+                    android:id="@+id/cb_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/primaryTextColor"
+                    android:paddingStart="5dp"
+                    android:tag="1"
+                    android:text="@string/lastmonth"
+                    android:textColor="@android:color/black"/>
+
+                <CheckBox
+                    android:id="@+id/cb_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/primaryTextColor"
+                    android:paddingStart="5dp"
+                    android:tag="2"
+                    android:text="@string/today"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/dork_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/result"
+                android:paddingStart="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Custom Search</string>
+
+    <string name="tab1">Download</string>
+    <string name="tab2">Dork Search</string>
+    <string name="tab3">I will add this functionality your help is needed \nThank you!!</string>
+
+    <string name="action_search">Search</string>
+    <string name="action_dork">Dork</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_download">Download</string>
+    <string name="action_advance"></string>
+
+    <string name="search_parms">Search Parameters</string>
+    <string name="intext">In Text</string>
+    <string name="inurl">In URL</string>
+    <string name="site">Site</string>
+    <string name="intitle">In Title</string>
+    <string name="filetype">File Type</string>
+    <string name="tags">Tags</string>
+    <string name="include">Include</string>
+    <string name="exclude">Exclude</string>
+    <string name="others">Other Params.</string>
+    <string name="search">Search..on Google</string>
+
+
+    <string name="hint">Search</string>
+    <string name="all">All</string>
+    <string name="video">Video,Movies</string>
+    <string name="gif">GIFs</string>
+    <string name="software">Software,Executables</string>
+    <string name="audio">Audio</string>
+    <string name="books">Books,Docs</string>
+    <string name="image">Images</string>
+    <string name="result">Result</string>
+    <string name="today">Today</string>
+    <string name="lastyear">Last Year</string>
+    <string name="lastmonth">Last Month</string>
+    <string name="about">About</string>
+    <string name="pages">Pages</string>
+    <string name="allofthese">ALL OF THESE WORD</string>
+    <string name="exactthesephrase">EXACT THESE PHARSE</string>
+    <string name="anyoftheseword">ANY OF THESE WORDS</string>
+    <string name="noneofthese">NONE OF THESE WORD</string>
+    <string name="numberfrom">NUMBER FROM</string>
+    <string name="numberto">NUMBER TO</string>
+</resources>

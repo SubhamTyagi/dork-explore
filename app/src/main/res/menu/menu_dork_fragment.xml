@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_dork"
+        android:icon="@drawable/ic_search"
+
+        android:title="@string/action_dork"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_dork_copy"
+        android:icon="?attr/actionModeCopyDrawable"
+        android:title="@android:string/copyUrl"
+        app:showAsAction="always"/>
+
+</menu>
