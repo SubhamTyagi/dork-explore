@@ -1,0 +1,14 @@
+Custom Search is a powerful tool that allows you to make better use of Google search engine, filtering the results according to the criteria entered by the user. this app uses parameters like: inurl, intext, intitle, filetype and much much more..... 
+
+You can filter Web searches using the following criteria:
+  - Download any file(movies,pdf,softwares etc) directly from internet
+  - Words on the page (all words)
+  - Exact phrase contained in the page
+  - Words on the page (any)
+  - Words NOT on the page
+  - Consecutive numbers
+  - Language
+  - Date of last update
+  - Web Site or Domain
+  - File Format
+  - and much more in apps

@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_calls"
-        android:icon="@android:drawable/stat_sys_download"
+        android:icon="@drawable/ic_search"
         android:title="@string/action_download"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_dork_copy"
+        android:icon="?attr/actionModeCopyDrawable"
+        android:title="@android:string/copyUrl"
         app:showAsAction="always"/>
 </menu>

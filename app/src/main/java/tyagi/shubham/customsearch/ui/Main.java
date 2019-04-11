@@ -1,9 +1,10 @@
 package tyagi.shubham.customsearch.ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -11,32 +12,24 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.shashank.sony.fancydialoglib.Animation;
-import com.shashank.sony.fancydialoglib.FancyAlertDialog;
-import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
-import com.shashank.sony.fancydialoglib.Icon;
-
-import tyagi.shubham.customsearch.fragments.DownloadFragment;
-import tyagi.shubham.customsearch.fragments.DorkFragment;
-import tyagi.shubham.customsearch.fragments.AdvanceFragment;
 import tyagi.shubham.customsearch.R;
 import tyagi.shubham.customsearch.adapters.ViewPagerAdapter;
+import tyagi.shubham.customsearch.fragments.AdvanceFragment;
+import tyagi.shubham.customsearch.fragments.DorkFragment;
+import tyagi.shubham.customsearch.fragments.DownloadFragment;
 
 public class Main extends AppCompatActivity {
 
-    //This is our tablayout
-    private TabLayout tabLayout;
-
-    //This is our viewPager
-    private ViewPager viewPager;
-
-    //Fragments
-
     DorkFragment dorkFragment;
     DownloadFragment downloadFragment;
+
+    //Fragments
     AdvanceFragment advanceFragment;
+    //This is our tablayout
+    private TabLayout tabLayout;
+    //This is our viewPager
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +47,7 @@ public class Main extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition(),true);
+                viewPager.setCurrentItem(tab.getPosition(), true);
             }
 
             @Override
@@ -76,7 +69,7 @@ public class Main extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                viewPager.setCurrentItem(position,true);
+                viewPager.setCurrentItem(position, true);
 
             }
 
@@ -116,49 +109,46 @@ public class Main extends AppCompatActivity {
     }
 
     private void about() {
-      //  new Fan
-        new FancyAlertDialog.Builder(this).setAnimation(Animation.SLIDE)
-                .setTitle("About")
-                .setMessage("This app is Developed by Shubham Tyagi(shubham2tyagi7@gmail.com)\nApp is in Development\nVersion:0.1")
-                .setPositiveBtnBackground(Color.parseColor("#388d3b"))
-                .setBackgroundColor(Color.parseColor("#d1245e"))
-                .setPositiveBtnText("Okay")
-                .isCancellable(false)
-                .setNegativeBtnText("Share")
-                .OnNegativeClicked(new FancyAlertDialogListener() {
+        new AlertDialog.Builder(this).setTitle("About")
+                .setMessage("This app is Developed by Shubham Tyagi\nApp is in Development\nVersion:0.2")
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
-                    public void OnClick() {
-                        shareThis();
+                    public void onClick(DialogInterface dialog, int which) {
 
                     }
-                })
-                .setIcon(android.R.drawable.ic_dialog_info, Icon.Visible).build();
+                }).setNegativeButton("Share", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                shareThis();
+            }
+        }).show();
+
     }
 
     private void shareThis() {
-        PackageManager pm =getPackageManager();
+        PackageManager pm = getPackageManager();
         ApplicationInfo appInfo;
         try {
-            appInfo=pm.getApplicationInfo(getPackageName(),PackageManager.GET_META_DATA);
-            Intent intent=new Intent(Intent.ACTION_SEND);
+            appInfo = pm.getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+            Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("*/*");
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+appInfo.publicSourceDir));
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + appInfo.publicSourceDir));
             startActivity(Intent.createChooser(intent, "Share it Using:"));
-        }catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException e) {
 
         }
     }
 
-    private void setupViewPager(ViewPager viewPager)
-    {
+    private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        downloadFragment =new DownloadFragment();
-        dorkFragment =new DorkFragment();
-        advanceFragment =new AdvanceFragment();
-        adapter.addFragment(downloadFragment,"DOWNLOAD");
-        adapter.addFragment(dorkFragment,"DORK");
-        adapter.addFragment(advanceFragment,"ADVANCE");
+        downloadFragment = new DownloadFragment();
+        dorkFragment = new DorkFragment();
+        advanceFragment = new AdvanceFragment();
+        adapter.addFragment(downloadFragment, "DOWNLOAD");
+        adapter.addFragment(dorkFragment, "DORK");
+        adapter.addFragment(advanceFragment, "ADVANCE");
         viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(1);
     }
 
 }
